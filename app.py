@@ -1,14 +1,11 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
-    """홈 페이지"""
-    return jsonify({
-        'message': 'Flask 서버가 정상적으로 실행 중입니다!',
-        'status': 'success'
-    })
+    """홈 페이지 - 생산관제 PARVIS 대시보드"""
+    return render_template('dashboard.html')
 
 @app.route('/api/health', methods=['GET'])
 def health_check():
@@ -38,5 +35,6 @@ if __name__ == '__main__':
     # 개발 서버 실행
     # host='0.0.0.0'으로 설정하면 외부에서도 접근 가능
     # debug=True로 설정하면 코드 변경 시 자동으로 재시작됨
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    # 포트 5000은 macOS AirPlay와 충돌하므로 5001로 변경
+    app.run(host='0.0.0.0', port=5001, debug=True)
 

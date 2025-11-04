@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>생산관제 PARVIS</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <!-- 헤더 -->
+    <header class="header">
+      <div class="header-content">
+        <span class="header-text">홈 화면</span>
+      </div>
+    </header>
+
+    <!-- 메인 컨텐츠 -->
+    <main class="main-content">
+      <h1 class="main-title">생산관제 PARVIS</h1>
+
+      <!-- 상단 섹션 -->
+      <div class="top-section">
+        <!-- 차트 섹션 -->
+        <div class="charts-section">
+          <div class="chart-card" id="a-yard-card">
+            <h3 class="chart-title">A야드</h3>
+            <div class="chart-container">
+              <div class="bar-wrapper">
+                <div class="bar" style="height: 40px">
+                  <span class="bar-value">40</span>
+                </div>
+              </div>
+              <div class="bar-wrapper">
+                <div class="bar" style="height: 10px">
+                  <span class="bar-value">10</span>
+                </div>
+              </div>
+              <div class="bar-wrapper">
+                <div class="bar" style="height: 15px">
+                  <span class="bar-value">15</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <h3 class="chart-title">B야드</h3>
+            <div class="chart-container">
+              <div class="bar-wrapper">
+                <div class="bar" style="height: 40px">
+                  <span class="bar-value">40</span>
+                </div>
+              </div>
+              <div class="bar-wrapper">
+                <div class="bar" style="height: 10px">
+                  <span class="bar-value">10</span>
+                </div>
+              </div>
+              <div class="bar-wrapper">
+                <div class="bar" style="height: 15px">
+                  <span class="bar-value">15</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <h3 class="chart-title">C야드</h3>
+            <div class="chart-container">
+              <div class="bar-wrapper">
+                <div class="bar" style="height: 40px">
+                  <span class="bar-value">40</span>
+                </div>
+              </div>
+              <div class="bar-wrapper">
+                <div class="bar" style="height: 10px">
+                  <span class="bar-value">10</span>
+                </div>
+              </div>
+              <div class="bar-wrapper">
+                <div class="bar" style="height: 15px">
+                  <span class="bar-value">15</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 리스트 섹션 -->
+        <div class="lists-section">
+          <div class="list-card">
+            <h3 class="list-title">Suggestion List</h3>
+            <div class="list-content"></div>
+          </div>
+
+          <div class="arrow-buttons">
+            <button class="arrow-btn arrow-right">→</button>
+            <button class="arrow-btn arrow-left">←</button>
+          </div>
+
+          <div class="list-card">
+            <h3 class="list-title">Select List</h3>
+            <div class="list-content"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 하단 섹션 -->
+      <div class="bottom-section">
+        <!-- 좌측 하단 -->
+        <div class="left-bottom">
+          <div class="empty-area"></div>
+          <input
+            type="text"
+            class="input-field"
+            placeholder="무엇이든 물어보세요"
+          />
+        </div>
+
+        <!-- 우측 하단 -->
+        <div class="right-bottom">
+          <div class="time-info">
+            <span class="time-label">운송 예상시간</span>
+            <span class="time-value">05:32</span>
+          </div>
+          <div class="simulation-section">
+            <button class="simulation-btn">Simulation</button>
+            <div class="simulation-box"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- 하단 바 -->
+    <footer class="footer-bar"></footer>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>
